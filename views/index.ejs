@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Catálogo</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="/images/carrousel1.png" alt="Logo">
+        <span>MATES</span>
+      </div>
+      <ul class="navbar-menu">
+        <li><a href="/">HOME</a></li>
+        <li><a href="#catalogo">CATÁLOGO</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <!-- <li><a href="#contact">LOGIN</a></li> -->
+      </ul>
+      <div class="navbar-toggle" id="navbar-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="/images/carrousel1.png" alt="Banner principal">
+  </section>
+
+  <% if (novedades.length > 0) { %>
+    <section class="novedades-seccion">
+      <h2 class="novedades-titulo">Novedades</h2>
+      <div class="productos novedades-grid">
+        <% novedades.forEach(producto => {
+             const varianteDestacada = producto.variantes.find(v => v.destacado) || producto.variantes[0];
+        %>
+          <div class="producto destacado">
+            <a href="/producto/<%= producto.id %>?categoria=<%= producto.categoria %>">
+              <img src="<%= varianteDestacada.imagen %>" alt="<%= producto.nombre %>" />
+              <h4><%= varianteDestacada.destacadoDescripcion %></h4>
+              <!-- <span class="etiqueta nuevo">Nuevo</span> -->
+            </a>
+          </div>
+        <% }) %>
+      </div>
+    </section>
+  <% } %>
+
+  <main id="catalogo">
+    <% Object.keys(productos).forEach(categoria => { %>
+      <section class="categoria-seccion">
+        <h3 class="categoria-titulo">
+          <%= categoria.charAt(0).toUpperCase() + categoria.slice(1) %>
+        </h3>
+        <div class="productos">
+          <% productos[categoria].forEach(producto => { %>
+            <div class="producto">
+              <a href="/producto/<%= producto.id %>?categoria=<%= categoria %>">
+                <img src="<%= producto.variantes[0].imagen %>" alt="<%= producto.nombre %>" />
+                <h4><%= producto.nombre %></h4>
+              </a>
+            </div>
+          <% }) %>
+        </div>
+      </section>
+    <% }) %>
+  </main>
+
+  <a href="https://wa.me/393515404305" class="whatsapp-float" target="_blank" aria-label="Chatea por WhatsApp">
+    <i class="fab fa-whatsapp" style="font-size: 32px; color: white;"></i>
+    </a>
+
+  <footer>
+    <p>&copy; 2025 Mi Empresa</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.getElementById("navbar-toggle");
+      const navbarMenu = document.querySelector(".navbar-menu");
+
+      toggleButton.addEventListener("click", () => {
+        navbarMenu.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+
+</html>

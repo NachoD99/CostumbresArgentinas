@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= producto.nombre %></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="/images/carrousel1.png" alt="Logo">
+        <span>MATES</span>
+      </div>
+      <ul class="navbar-menu">
+        <li><a href="/">HOME</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Detalle del producto -->
+  <section id="detalle-producto">
+    <div class="producto-detalle">
+      <!-- Imagen del producto -->
+      <div class="img-container">
+        <img id="imagenProducto" src="<%= producto.variantes[0].imagen %>" alt="<%= producto.nombre %>" />
+      </div>
+
+      <!-- Info del producto -->
+      <div class="info">
+        <h2><%= producto.nombre %></h2>
+        <p><%= producto.descripcion %></p>
+        <strong class="precio">$ Consultar</strong>
+
+        <!-- Etiqueta de estado -->
+        <span id="etiquetaEstado" class="etiqueta <%= producto.variantes[0].estado %>">
+          <%= producto.variantes[0].estado === 'nuevo' ? 'Nuevo' :
+              producto.variantes[0].estado === 'agotado' ? 'Sin stock' :
+              producto.variantes[0].estado || '&nbsp;' %>
+        </span>
+
+        <!-- Selector de color -->
+        <div class="color-selector">
+          <label style="margin-bottom: 0.5rem; display: block;">Colores disponibles:</label>
+          <div class="color-options">
+            <% producto.variantes.forEach((variante, index) => { %>
+              <label class="color-circle" title="<%= variante.color %>" style="background-color: <%= variante.hex %>;">
+                <input type="radio" name="color" value="<%= variante.imagen %>" <%= index === 0 ? 'checked' : '' %> />
+              </label>
+            <% }) %>
+          </div>
+        </div>
+
+        <!-- Botón volver -->
+        <button class="volver-btn" onclick="history.back()">Volver al catálogo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a id="whatsapp-link" class="whatsapp-float" target="_blank" aria-label="Chatea por WhatsApp">
+    <i class="fab fa-whatsapp" style="font-size: 32px; color: white;"></i>
+  </a>
+
+  <!-- Script -->
+  <script>
+    // Variables iniciales
+    const productoNombre = "<%= producto.nombre %>";
+    const variantes = <%- JSON.stringify(producto.variantes) %>;
+    const imgElemento = document.getElementById("imagenProducto");
+    const etiquetaElemento = document.getElementById("etiquetaEstado");
+    const whatsappLink = document.getElementById("whatsapp-link");
+    const inputsColor = document.querySelectorAll('input[name="color"]');
+
+    // Actualiza la imagen del producto
+    function actualizarImagen(index) {
+      imgElemento.src = variantes[index].imagen;
+    }
+
+    // Actualiza la etiqueta de estado
+    function actualizarEtiquetaEstado(index) {
+      const estado = variantes[index].estado;
+      etiquetaElemento.textContent =
+        estado === "nuevo" ? "Nuevo" :
+        estado === "agotado" ? "Sin stock" :
+        estado || "\u00A0";
+
+      etiquetaElemento.className = "etiqueta " + (estado || "oculta");
+    }
+
+    // Actualiza el link de WhatsApp con el color seleccionado
+    function actualizarLinkWhatsApp(index) {
+      const color = variantes[index].color;
+      const mensaje = `Hola, estoy interesado en el producto ${productoNombre}, en color ${color}. ¿Está disponible?`;
+      const url = "https://wa.me/393515404305?text=" + encodeURIComponent(mensaje);
+      whatsappLink.href = url;
+    }
+
+    // Listener para todos los inputs de color
+    inputsColor.forEach((input, index) => {
+      input.addEventListener('change', () => {
+        actualizarImagen(index);
+        actualizarEtiquetaEstado(index);
+        actualizarLinkWhatsApp(index);
+      });
+    });
+
+    // Inicializar con el primer color
+    actualizarLinkWhatsApp(0);
+  </script>
+</body>
+
+</html>

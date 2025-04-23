@@ -123,6 +123,10 @@ app.get('/faq', (req, res) => {
   res.render('faq');
 });
 
+app.get('/aboutUs', (req, res) => {
+  res.render('aboutUs');
+});
+
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

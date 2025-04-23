@@ -20,6 +20,7 @@
         <li><a href="/">HOME</a></li>
         <li><a href="#catalogo">CATÁLOGO</a></li>
         <li><a href="/faq">FAQ</a></li>
+        <li><a href="/aboutUs">SOBRE NOSOTROS</a></li>
         <!-- <li><a href="#contact">LOGIN</a></li> -->
       </ul>
       <div class="navbar-toggle" id="navbar-toggle">
@@ -31,24 +32,28 @@
   </header>
 
   <section class="hero">
-    <img src="/images/carrousel1.png" alt="Banner principal">
+    <img src="/images/carrousel1.png" alt="Imagen principal" style="width: 100%; height: auto;" />
   </section>
 
   <% if (novedades.length > 0) { %>
     <section class="novedades-seccion">
-      <h2 class="novedades-titulo">Novedades</h2>
-      <div class="productos novedades-grid">
-        <% novedades.forEach(producto => {
-             const varianteDestacada = producto.variantes.find(v => v.destacado) || producto.variantes[0];
-        %>
-          <div class="producto destacado">
-            <a href="/producto/<%= producto.id %>?categoria=<%= producto.categoria %>">
-              <img src="<%= varianteDestacada.imagen %>" alt="<%= producto.nombre %>" />
-              <h4><%= varianteDestacada.destacadoDescripcion %></h4>
-              <!-- <span class="etiqueta nuevo">Nuevo</span> -->
-            </a>
-          </div>
-        <% }) %>
+      <div class="novedades-layout">
+        <div class="novedades-titulo-wrapper">
+          <h2 class="novedades-titulo">Novedades</h2>
+        </div>
+    
+        <div class="novedades-grid">
+          <% novedades.forEach(producto => {
+               const varianteDestacada = producto.variantes.find(v => v.destacado) || producto.variantes[0];
+          %>
+            <div class="producto destacado">
+              <a href="/producto/<%= producto.id %>?categoria=<%= producto.categoria %>">
+                <img src="<%= varianteDestacada.imagen %>" alt="<%= producto.nombre %>" />
+                <h4><%= producto.nombre %></h4>
+              </a>
+            </div>
+          <% }) %>
+        </div>
       </div>
     </section>
   <% } %>

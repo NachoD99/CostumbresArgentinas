@@ -53,28 +53,99 @@ const productos = {
       ]
     }
   ],
-  // termos: [
-  //   {
-  //     id: 2,
-  //     nombre: "Termo Stanley",
-  //     descripcion: "Termo de acero inoxidable.",
-  //     categoria: "termos",
-  //     variantes: [
-  //       { color: "Verde", hex: "#d32f2f", estado: "nuevo", imagen: "/images/productos/prod1.png" },
-  //       { color: "Negro", hex: "#1976d2", estado: "nuevo", imagen: "/images/productos/prod2.png" },
-  //     ]
-  //   },
-  //   {
-  //     id: 3,
-  //     nombre: "Termo Stanley",
-  //     descripcion: "Termo de acero inoxidable.",
-  //     categoria: "termos",
-  //     variantes: [
-  //       { color: "Verde", hex: "#d32f2f", estado: "nuevo", imagen: "/images/productos/prod1.png" },
-  //       { color: "Negro", hex: "#1976d2", estado: "nuevo", imagen: "/images/productos/prod2.png" },
-  //     ]
-  //   },
-  // ]
+  termos: [
+    {
+      id: 5,
+      nombre: "Termo Stanley",
+      descripcion: "Termo de acero inoxidable.",
+      categoria: "termos",
+      variantes: [
+        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
+        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", destacado: true, destacadoDescripcion: "DISEÑO EXCLUSIVO ARGENTINA", imagen: "/images/productos/egg-shape/3.png" },
+      ]
+    },
+    {
+      id: 6,
+      nombre: "Termo Stanley",
+      descripcion: "Termo de acero inoxidable.",
+      categoria: "termos",
+      variantes: [
+        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
+        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
+      ]
+    },{
+      id: 7,
+      nombre: "Termo Stanley",
+      descripcion: "Termo de acero inoxidable.",
+      categoria: "termos",
+      variantes: [
+        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
+        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
+      ]
+    },
+    {
+      id: 8,
+      nombre: "Termo Stanley",
+      descripcion: "Termo de acero inoxidable.",
+      categoria: "termos",
+      variantes: [
+        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
+        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
+      ]
+    }
+  ],
+  accesorios: [
+    {
+      id: 9,
+      nombre: "Termo Stanley",
+      descripcion: "Termo de acero inoxidable.",
+      categoria: "termos",
+      variantes: [
+        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
+        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", destacado: true, destacadoDescripcion: "DISEÑO EXCLUSIVO ARGENTINA", imagen: "/images/productos/egg-shape/3.png" },
+      ]
+    },
+    {
+      id: 10,
+      nombre: "Termo Stanley",
+      descripcion: "Termo de acero inoxidable.",
+      categoria: "termos",
+      variantes: [
+        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
+        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
+      ]
+    },
+    
+    {
+      id: 11,
+      nombre: "Termo Stanley",
+      descripcion: "Termo de acero inoxidable.",
+      categoria: "termos",
+      variantes: [
+        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
+        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
+      ]
+    },
+    
+    {
+      id: 12,
+      nombre: "Termo Stanley",
+      descripcion: "Termo de acero inoxidable.",
+      categoria: "termos",
+      variantes: [
+        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
+        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
+      ]
+    },
+  ]
 };
 
 app.set('view engine', 'ejs');

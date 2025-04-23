@@ -595,3 +595,23 @@ footer {
     margin-top: 2rem;
   }
 }
+
+.mapa-ubicacion {
+  margin-bottom: 4rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.mapa-ubicacion h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+.mapa-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}

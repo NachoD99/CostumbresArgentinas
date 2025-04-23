@@ -87,19 +87,26 @@
 </head>
 
 <body>
-
     <header>
         <nav class="navbar">
-            <div class="navbar-logo">
-                <img src="/images/carrousel1.png" alt="Logo">
-                <span>ORGULLO ARGENTINO</span>
-            </div>
-            <ul class="navbar-menu">
-                <li><a href="/">HOME</a></li>
-                <li><a href="/sobre">SOBRE NOSOTROS</a></li>
-            </ul>
+          <div class="navbar-logo">
+            <img src="/images/carrousel1.png" alt="Logo">
+            <span>MATES</span>
+          </div>
+          <ul class="navbar-menu">
+            <li><a href="/">HOME</a></li>
+            <li><a href="#catalogo">CATÁLOGO</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/aboutUs">SOBRE NOSOTROS</a></li>
+            <!-- <li><a href="#contact">LOGIN</a></li> -->
+          </ul>
+          <div class="navbar-toggle" id="navbar-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
         </nav>
-    </header>
+      </header>
 
     <main class="sobre-container">
         <section class="sobre-hero">
@@ -154,4 +161,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
 </body>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.getElementById("navbar-toggle");
+      const navbarMenu = document.querySelector(".navbar-menu");
+
+      toggleButton.addEventListener("click", () => {
+        navbarMenu.classList.toggle("active");
+      });
+    });
+  </script>
 </html>

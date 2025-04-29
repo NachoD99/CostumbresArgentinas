@@ -207,4 +207,19 @@ app.listen(PORT, () => {
 });
 
 
+// Middleware para procesar formularios
+app.use(express.urlencoded({ extended: true }));
+
+// Ruta POST para contacto
+app.post('/enviar', (req, res) => {
+  const { nombre, email, mensaje } = req.body;
+
+  // Podés hacer algo útil aquí: enviar mail, guardar en base de datos, etc.
+  console.log('Formulario recibido:', { nombre, email, mensaje });
+
+  // Redirige o responde
+  res.redirect('/contact');
+  res.send('Gracias por contactarte. Te responderemos pronto.');
+});
+
 

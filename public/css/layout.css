@@ -146,6 +146,12 @@ body {
   h3 {
     text-align: center;
   }
+
+  
+a {
+    text-decoration: none;
+    color: #1d1c1c;
+  }
   
   .hero {
     text-align: center;

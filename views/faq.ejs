@@ -5,74 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Preguntas Frecuentes</title>
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/faq.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-...." crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    .faq-container {
-      max-width: 800px;
-      margin: 6rem auto;
-      padding: 2rem;
-    }
-  
-    .faq-titulo {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      color: #007bff;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-  
-    .faq-item {
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-      margin-bottom: 1.5rem;
-      overflow: hidden;
-      transition: box-shadow 0.3s ease, transform 0.2s ease;
-    }
-  
-    .faq-item:hover {
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-      transform: translateY(-2px);
-    }
-  
-    .faq-pregunta {
-      background: #f8f8f8;
-      padding: 1rem 1.5rem;
-      font-weight: bold;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background 0.2s ease;
-      font-size: 1rem;
-    }
-  
-    .faq-pregunta:hover {
-      background: #ececec;
-    }
-  
-    .faq-icon {
-      font-size: 1.2rem;
-      transition: transform 0.2s ease;
-      margin-left: 10px;
-    }
-  
-    .faq-respuesta {
-      max-height: 0;
-      overflow: hidden;
-      padding: 0 1.5rem;
-      background: #fff;
-      font-size: 0.95rem;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-    }
-  
-    .faq-item.active .faq-respuesta {
-      padding: 1rem 1.5rem;
-      max-height: 300px;
-    }
-  </style>
 </head>
 
 <body>
@@ -84,10 +21,9 @@
       </div>
       <ul class="navbar-menu">
         <li><a href="/">HOME</a></li>
-        <li><a href="#catalogo">CATÁLOGO</a></li>
-        <li><a href="/faq">FAQ</a></li>
         <li><a href="/aboutUs">SOBRE NOSOTROS</a></li>
-        <!-- <li><a href="#contact">LOGIN</a></li> -->
+        <li><a href="/contact">CONTACTO</a></li>
+        <li><a href="/faq">FAQ</a></li>
       </ul>
       <div class="navbar-toggle" id="navbar-toggle">
         <span class="bar"></span>

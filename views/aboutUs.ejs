@@ -5,108 +5,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre Nosotros</title>
-    <link rel="stylesheet" href="/style.css" />
-    <style>
-        .sobre-container {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 2rem;
-        }
-
-        .sobre-hero {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .sobre-hero img {
-            max-width: 500px;
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .sobre-texto {
-            flex: 1;
-        }
-
-        .sobre-texto h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #007bff;
-        }
-
-        .sobre-texto p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .sobre-valores {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 2rem;
-        }
-
-        .valor-item {
-            background-color: #f9f9f9;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .valor-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .valor-item i {
-            font-size: 2rem;
-            color: #007bff;
-            margin-bottom: 1rem;
-        }
-
-        .valor-item h3 {
-            margin-bottom: 0.5rem;
-            color: #007bff;
-        }
-
-        @media (max-width: 768px) {
-            .sobre-hero {
-                flex-direction: column;
-            }
-
-            .sobre-texto h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/aboutUs.css" />
 </head>
 
 <body>
     <header>
         <nav class="navbar">
-          <div class="navbar-logo">
-            <img src="/images/carrousel1.png" alt="Logo">
-            <span>MATES</span>
-          </div>
-          <ul class="navbar-menu">
-            <li><a href="/">HOME</a></li>
-            <li><a href="#catalogo">CATÁLOGO</a></li>
-            <li><a href="/faq">FAQ</a></li>
-            <li><a href="/aboutUs">SOBRE NOSOTROS</a></li>
-            <!-- <li><a href="#contact">LOGIN</a></li> -->
-          </ul>
-          <div class="navbar-toggle" id="navbar-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
+            <div class="navbar-logo">
+                <img src="/images/carrousel1.png" alt="Logo">
+                <span>MATES</span>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/aboutUs">SOBRE NOSOTROS</a></li>
+                <li><a href="/contact">CONTACTO</a></li>
+                <li><a href="/faq">FAQ</a></li>
+            </ul>
+            <div class="navbar-toggle" id="navbar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
-      </header>
+    </header>
 
     <main class="sobre-container">
         <section class="sobre-hero">
@@ -163,12 +87,13 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const toggleButton = document.getElementById("navbar-toggle");
-      const navbarMenu = document.querySelector(".navbar-menu");
+        const toggleButton = document.getElementById("navbar-toggle");
+        const navbarMenu = document.querySelector(".navbar-menu");
 
-      toggleButton.addEventListener("click", () => {
-        navbarMenu.classList.toggle("active");
-      });
+        toggleButton.addEventListener("click", () => {
+            navbarMenu.classList.toggle("active");
+        });
     });
-  </script>
+</script>
+
 </html>

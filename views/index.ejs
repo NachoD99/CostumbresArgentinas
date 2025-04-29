@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Catálogo</title>
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/index.css" />
 </head>
 
 <body>
@@ -18,10 +20,9 @@
       </div>
       <ul class="navbar-menu">
         <li><a href="/">HOME</a></li>
-        <li><a href="#catalogo">CATÁLOGO</a></li>
-        <li><a href="/faq">FAQ</a></li>
         <li><a href="/aboutUs">SOBRE NOSOTROS</a></li>
-        <!-- <li><a href="#contact">LOGIN</a></li> -->
+        <li><a href="/contact">CONTACTO</a></li>
+        <li><a href="/faq">FAQ</a></li>
       </ul>
       <div class="navbar-toggle" id="navbar-toggle">
         <span class="bar"></span>
@@ -50,6 +51,7 @@
               <a href="/producto/<%= producto.id %>?categoria=<%= producto.categoria %>">
                 <img src="<%= varianteDestacada.imagen %>" alt="<%= producto.nombre %>" />
                 <h4><%= producto.nombre %></h4>
+                <p class="solo-mobile"><%= producto.descripcion %></p>
               </a>
             </div>
           <% }) %>
@@ -69,8 +71,11 @@
             <div class="producto">
               <a href="/producto/<%= producto.id %>?categoria=<%= categoria %>">
                 <img src="<%= producto.variantes[0].imagen %>" alt="<%= producto.nombre %>" />
-                <h4><%= producto.nombre %></h4>
               </a>
+              <div class="producto-info-mobile">
+                <h4><%= producto.nombre %></h4>
+                <p class="solo-mobile"><%= producto.descripcion %></p>
+              </div>
             </div>
           <% }) %>
         </div>
@@ -79,8 +84,8 @@
   </main>
 
   <a href="https://wa.me/393515404305" class="whatsapp-float" target="_blank" aria-label="Chatea por WhatsApp">
-    <i class="fab fa-whatsapp" style="font-size: 32px; color: white;"></i>
-    </a>
+    <i class="fab fa-whatsapp"></i>
+</a>
 
   <footer>
     <p>&copy; 2025 Mi Empresa</p>

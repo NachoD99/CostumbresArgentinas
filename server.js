@@ -9,47 +9,47 @@ const productos = {
     {
       id: 1,
       nombre: "Mate Imperial",
-      descripcion: "ACERO INOXIDABLE, SIN BPA, DOBLE PARED AISLADA AL VACÍO, APTA PARA LAVAVAJILLAS. CAPACIDAD 200ML",
+      descripcion: "Acero inoxidable libre de BPA, con doble pared aislada al vacío. Apto para lavavajillas. Capacidad: 200 ml. Recubrimiento plástico de alta calidad. Bombilla de Regalo",
       categoria: "mates",
       variantes: [
-        { color: "Negro", hex: "#0B141D", estado: "nuevo", imagen: "/images/productos/imperial/1.png" },
-        { color: "Marrón", hex: "#3E313A", estado: "nuevo", imagen: "/images/productos/imperial/2.png" },
-        { color: "Gris", hex: "#4E4C51", estado: "nuevo", imagen: "/images/productos/imperial/3.png" },
-        { color: "Rosa", hex: "#93786F", estado: "nuevo", imagen: "/images/productos/imperial/4.png" },
+        { color: "Negro", precio: "15", hex: "#0B141D", estado: "nuevo", imagen: "/images/productos/imperial/1.png" },
+        { color: "Marrón", precio: "15", hex: "#3E313A", estado: "nuevo", imagen: "/images/productos/imperial/2.png" },
+        { color: "Gris", precio: "15", hex: "#4E4C51", estado: "nuevo", imagen: "/images/productos/imperial/3.png" },
+        { color: "Rosa", precio: "15", hex: "#93786F", estado: "nuevo", imagen: "/images/productos/imperial/4.png" },
       ]
     },
     {
       id: 2,
       nombre: "Mate Torpedo",
-      descripcion: "ACERO INOXIDABLE, SIN BPA, DOBLE PARED AISLADA AL VACÍO, APTA PARA LAVAVAJILLAS. CAPACIDAD 200ML",
+      descripcion: "Acero inoxidable libre de BPA, con doble pared aislada al vacío. Apto para lavavajillas. Capacidad: 200 ml. Recubrimiento plástico de alta calidad. Bombilla de Regalo",
       categoria: "mates",
       variantes: [
-        { color: "Marrón", hex: "#3E313A", estado: "nuevo", imagen: "/images/productos/torpedo/1.png" },
-        { color: "Rosa", hex: "#93786F", estado: " ", imagen: "/images/productos/torpedo/2.png" },
-        { color: "Gris", hex: "#4E4C51", estado: "oferta", imagen: "/images/productos/torpedo/3.png" },
-        { color: "Verde", hex: "#2B4961", estado: "agotado", imagen: "/images/productos/torpedo/4.png" },
+        { color: "Marrón", precio: "15", hex: "#3E313A", estado: "nuevo", imagen: "/images/productos/torpedo/1.png" },
+        { color: "Rosa", precio: "15", hex: "#93786F", estado: " ", imagen: "/images/productos/torpedo/2.png" },
+        { color: "Gris", precio: "15", hex: "#4E4C51", estado: "oferta", imagen: "/images/productos/torpedo/3.png" },
+        { color: "Verde", precio: "15", hex: "#2B4961", estado: "agotado", imagen: "/images/productos/torpedo/4.png" },
       ]
     },
     {
       id: 3,
-      nombre: "Acero Inoxidable Egg-Shape",
-      descripcion: "Mate de cuero con virola de alpaca.",
+      nombre: "Mate Acero Inoxidable Egg-Shape",
+      descripcion: "Taza de bebida de doble pared personalizada al por mayor botella con forma de huevo al vacío de acero inoxidable 304. Capacidad: 355 ml. 100% libre de BPA y libre de toxinas químicas o metálicas, y hecho de acero inoxidable 304 de alta calidad como tapa, salud, moda, protección del medio ambiente. Bombilla de regalo.",
       categoria: "mates",
       variantes: [
-        { color: "Rosa", hex: "#C89E91", estado: "nuevo", imagen: "/images/productos/egg-shape/1.png" },
-        { color: "Azul", hex: "#01317F", estado: "nuevo", imagen: "/images/productos/egg-shape/2.png" },
-        { color: "Personalizado", hex: "#82C9E5", estado: "oferta", destacado: true, destacadoDescripcion: "DISEÑO EXCLUSIVO ARGENTINA", imagen: "/images/productos/egg-shape/3.png" },
+        { color: "Rosa", precio: "15", hex: "#C89E91", estado: "nuevo", imagen: "/images/productos/egg-shape/1.png" },
+        { color: "Azul", precio: "15", hex: "#01317F", estado: "nuevo", imagen: "/images/productos/egg-shape/2.png" },
+        { color: "Personalizado", precio: "20", hex: "#82C9E5", estado: "oferta", destacado: true, destacadoDescripcion: "DISEÑO EXCLUSIVO ARGENTINA", imagen: "/images/productos/egg-shape/3.png" },
       ]
     },
     {
       id: 4,
-      nombre: "Acero Inoxidable 2",
-      descripcion: "Mate de cuero con virola de alpaca.",
+      nombre: "Mate Acero Inoxidable",
+      descripcion: "100% libre de BPA y libre de toxinas químicas o metálicas, y hecho de acero inoxidable 304 de alta calidad como tapa, salud, moda, protección del medio ambiente. Capacidad: 240 ml. Bombilla de regalo.",
       categoria: "mates",
       variantes: [
-        { color: "Negro", hex: "#13171A", estado: "nuevo", imagen: "/images/productos/acero-mate/1.png" },
-        { color: "Verde", hex: "#175044", estado: "nuevo", imagen: "/images/productos/acero-mate/2.png" },
-        { color: "Personalizado", hex: "#82C9E5", estado: "nuevo", destacado: true, destacadoDescripcion: "DISEÑO EXCLUSIVO ARGENTINA", imagen: "/images/productos/acero-mate/3.png" },
+        { color: "Negro", precio: "15", hex: "#13171A", estado: "nuevo", imagen: "/images/productos/acero-mate/1.png" },
+        { color: "Verde", precio: "15", hex: "#175044", estado: "nuevo", imagen: "/images/productos/acero-mate/2.png" },
+        { color: "Personalizado", precio: "20", hex: "#82C9E5", estado: "nuevo", destacado: true, destacadoDescripcion: "DISEÑO EXCLUSIVO ARGENTINA", imagen: "/images/productos/acero-mate/3.png" },
       ]
     }
   ],
@@ -60,9 +60,9 @@ const productos = {
       descripcion: "Termo de acero inoxidable.",
       categoria: "termos",
       variantes: [
-        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
-        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
-        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", destacado: true, destacadoDescripcion: "DISEÑO EXCLUSIVO ARGENTINA", imagen: "/images/productos/egg-shape/3.png" },
+        { color: "Rosa", precio: "15", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
+        { color: "Azul", precio: "15", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+        { color: "Personalizado", precio: "30", hex: "#82C9E5", estado: "agotado", destacado: false, destacadoDescripcion: "DISEÑO EXCLUSIVO ARGENTINA", imagen: "/images/productos/egg-shape/3.png" },
       ]
     },
     {
@@ -71,80 +71,81 @@ const productos = {
       descripcion: "Termo de acero inoxidable.",
       categoria: "termos",
       variantes: [
-        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
-        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
-        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
-      ]
-    },{
-      id: 7,
-      nombre: "Termo Stanley",
-      descripcion: "Termo de acero inoxidable.",
-      categoria: "termos",
-      variantes: [
-        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
-        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
-        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
+        { color: "Rosa", precio: "15", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
+        { color: "Azul", precio: "15", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+        { color: "Personalizado", precio: "30", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
       ]
     },
-    {
-      id: 8,
-      nombre: "Termo Stanley",
-      descripcion: "Termo de acero inoxidable.",
-      categoria: "termos",
-      variantes: [
-        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
-        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
-        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
-      ]
-    }
+    // {
+    //   id: 7,
+    //   nombre: "Termo Stanley",
+    //   descripcion: "Termo de acero inoxidable.",
+    //   categoria: "termos",
+    //   variantes: [
+    //     { color: "Rosa", precio: "15", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
+    //     { color: "Azul", precio: "15", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+    //     { color: "Personalizado", precio: "15", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
+    //   ]
+    // },
+    // {
+    //   id: 8,
+    //   nombre: "Termo Stanley",
+    //   descripcion: "Termo de acero inoxidable.",
+    //   categoria: "termos",
+    //   variantes: [
+    //     { color: "Rosa", precio: "15", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
+    //     { color: "Azul", precio: "15", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+    //     { color: "Personalizado", precio: "15", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
+    //   ]
+    // }
   ],
   accesorios: [
     {
       id: 9,
-      nombre: "Termo Stanley",
-      descripcion: "Termo de acero inoxidable.",
+      nombre: "Bombilla",
+      descripcion: "Bombilla de acero inoxidable con cabezal removible para mejor limpieza.",
       categoria: "termos",
       variantes: [
-        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
-        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
-        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", destacado: true, destacadoDescripcion: "DISEÑO EXCLUSIVO ARGENTINA", imagen: "/images/productos/egg-shape/3.png" },
+        { color: "Acero", precio: "5", hex: "#C8C6C2", estado: " ", imagen: "/images/productos/egg-shape/1.png" },
+        // { color: "Azul", precio: "15", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+        // { color: "Personalizado", precio: "15", hex: "#82C9E5", estado: "agotado", destacado: true, destacadoDescripcion: "DISEÑO EXCLUSIVO ARGENTINA", imagen: "/images/productos/egg-shape/3.png" },
       ]
     },
-    {
-      id: 10,
-      nombre: "Termo Stanley",
-      descripcion: "Termo de acero inoxidable.",
-      categoria: "termos",
-      variantes: [
-        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
-        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
-        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
-      ]
-    },
+    // {
+    //   id: 10,
+    //   nombre: "Termo Stanley",
+    //   descripcion: "Termo de acero inoxidable.",
+    //   categoria: "termos",
+    //   variantes: [
+    //     { color: "Rosa", precio: "15", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
+    //     { color: "Azul", precio: "15", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+    //     { color: "Personalizado", precio: "15", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
+    //   ]
+    // },
     
-    {
-      id: 11,
-      nombre: "Termo Stanley",
-      descripcion: "Termo de acero inoxidable.",
-      categoria: "termos",
-      variantes: [
-        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
-        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
-        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
-      ]
-    },
+    // {
+    //   id: 11,
+    //   nombre: "Termo Stanley",
+    //   descripcion: "Termo de acero inoxidable.",
+    //   categoria: "termos",
+    //   variantes: [
+    //     { color: "Rosa", precio: "15", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
+    //     { color: "Azul", precio: "15", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+    //     { color: "Personalizado", precio: "15", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
+    //   ]
+    // },
     
-    {
-      id: 12,
-      nombre: "Termo Stanley",
-      descripcion: "Termo de acero inoxidable.",
-      categoria: "termos",
-      variantes: [
-        { color: "Rosa", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
-        { color: "Azul", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
-        { color: "Personalizado", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
-      ]
-    },
+    // {
+    //   id: 12,
+    //   nombre: "Termo Stanley",
+    //   descripcion: "Termo de acero inoxidable.",
+    //   categoria: "termos",
+    //   variantes: [
+    //     { color: "Rosa", precio: "15", hex: "#C89E91", estado: "agotado", imagen: "/images/productos/egg-shape/1.png" },
+    //     { color: "Azul", precio: "15", hex: "#01317F", estado: "agotado", imagen: "/images/productos/egg-shape/2.png" },
+    //     { color: "Personalizado", precio: "15", hex: "#82C9E5", estado: "agotado", imagen: "/images/productos/egg-shape/3.png" },
+    //   ]
+    // },
   ]
 };
 

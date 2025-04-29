@@ -1,8 +1,14 @@
+/* body{
+  background-image: url('/images/bg.png');
+  background-repeat: no-repeat; 
+  background-position: right;
+} 
+ */
 #detalle-producto {
     flex: 1;
     max-width: 1000px;
     max-height: 1000px;
-    margin-top: 6rem;
+    margin: 6rem auto;
     padding: 2rem;
     border-radius: 16px;
   }
@@ -51,11 +57,12 @@
   }
   
   .volver-btn {
-    background-color: #4b6cb7;
+    background-color: #74acdf;
     /* azul elegante */
     color: white;
     border: none;
     padding: 0.6rem 1.2rem;
+    margin-bottom: 1rem;
     font-size: 1rem;
     border-radius: 8px;
     cursor: pointer;
@@ -76,6 +83,49 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+  }
+
+  .etiqueta {
+    position: relative;
+    top: 10px;
+    width: fit-content;
+    min-width: 80px;
+    /* asegura un ancho mínimo */
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 6px;
+    text-transform: uppercase;
+    z-index: 2;
+    color: white;
+    background-color: transparent;
+    visibility: visible;
+  }
+  
+  .etiqueta.oculta {
+    background-color: transparent;
+    visibility: hidden;
+    /* oculto pero mantiene el espacio */
+  }
+  
+  .etiqueta.nuevo {
+    background-color: #28a745;
+  }
+  
+  .etiqueta.agotado {
+    background-color: #dc3545;
+  }
+  
+  .etiqueta.oferta {
+    background-color: #ffc107;
+  }
+  
+  .img-container {
+    position: relative;
   }
   
   /* Fade-in animation */

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Catálogo</title>
+  <link rel="icon" href="/images/logo/favicon.png" type="image/png">
   <link rel="stylesheet" href="/css/layout.css" />
   <link rel="stylesheet" href="/css/components.css" />
   <link rel="stylesheet" href="/css/index.css" />
@@ -15,8 +16,8 @@
   <header>
     <nav class="navbar">
       <div class="navbar-logo">
-        <img src="/images/carrousel1.png" alt="Logo">
-        <span>MATES</span>
+        <img src="/images/logo/favicon.png" alt="Logo">
+        <span>Costumbres Argentinas</span>
       </div>
       <ul class="navbar-menu">
         <li><a href="/">HOME</a></li>
@@ -37,25 +38,22 @@
   </section>
 
   <% if (novedades.length > 0) { %>
-    <section class="novedades-seccion">
-      <div class="novedades-layout">
-        <div class="novedades-titulo-wrapper">
-          <h2 class="novedades-titulo">Novedades</h2>
-        </div>
-    
-        <div class="novedades-grid">
-          <% novedades.forEach(producto => {
-               const varianteDestacada = producto.variantes.find(v => v.destacado) || producto.variantes[0];
-          %>
-            <div class="producto destacado">
-              <a href="/producto/<%= producto.id %>?categoria=<%= producto.categoria %>">
-                <img src="<%= varianteDestacada.imagen %>" alt="<%= producto.nombre %>" />
-                <h4><%= producto.nombre %></h4>
-                <p class="solo-mobile"><%= producto.descripcion %></p>
-              </a>
+    <section class="categoria-seccion">
+      <h3 class="categoria-titulo">Novedades</h3>
+      <div class="productos">
+        <% novedades.forEach(producto => {
+             const variante = producto.variantes.find(v => v.destacado) || producto.variantes[0];
+        %>
+          <div class="producto producto-novedad">
+            <a href="/producto/<%= producto.id %>?categoria=<%= producto.categoria %>">
+              <img src="<%= variante.imagen %>" alt="<%= producto.nombre %>" />
+            </a>
+            <div class="producto-info-mobile">
+              <h4><%= producto.nombre %></h4>
+              <p class="solo-mobile"><%= producto.descripcion %></p>
             </div>
-          <% }) %>
-        </div>
+          </div>
+        <% }) %>
       </div>
     </section>
   <% } %>

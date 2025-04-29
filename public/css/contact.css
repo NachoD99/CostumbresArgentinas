@@ -35,11 +35,11 @@
   
   .contact-form input:focus,
   .contact-form textarea:focus {
-    border-color: #4b6cb7;
+    border-color: #74acdf;
   }
   
   .contact-form button {
-    background-color: #4b6cb7;
+    background-color: #74acdf;
     color: white;
     padding: 14px;
     border: none;
@@ -50,7 +50,7 @@
   }
   
   .contact-form button:hover {
-    background-color: #3a539b;
+    background-color: #74acdf;
   }
   
   .redes-sociales {

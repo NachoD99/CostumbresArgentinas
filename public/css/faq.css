@@ -1,4 +1,5 @@
 .faq-container {
+    height: 100vh;
     max-width: 800px;
     margin: 6rem auto;
     padding: 2rem;

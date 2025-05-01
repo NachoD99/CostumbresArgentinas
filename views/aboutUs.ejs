@@ -10,39 +10,24 @@
     <link rel="stylesheet" href="/css/components.css" />
     <link rel="stylesheet" href="/css/index.css" />
     <link rel="stylesheet" href="/css/aboutUs.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="navbar-logo">
-                <img src="/images/logo/favicon.png" alt="Logo">
-                <span>Costumbres Argentinas</span>
-            </div>
-            <ul class="navbar-menu">
-                <li><a href="/">HOME</a></li>
-                <li><a href="/aboutUs">SOBRE NOSOTROS</a></li>
-                <li><a href="/contact">CONTACTO</a></li>
-                <li><a href="/faq">FAQ</a></li>
-            </ul>
-            <div class="navbar-toggle" id="navbar-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
+        <%- include('partials/navbar') %>
     </header>
 
     <main class="sobre-container">
         <section class="sobre-hero">
             <img src="/images/logo/favicon.png" alt="Nuestra empresa">
             <div class="sobre-texto">
-                <h1>Quiénes Somos</h1>
+                <h1>Quienes Somos</h1>
                 <p>
-                    En Costumbres Argentinas nos dedicamos con pasión a la comercialización de mates, bombillas
-                    y termos que representan la cultura de nuestro país. Cada producto que ofrecemos está fabricado con
-                    amor, calidad y tradición.
+                    En Costumbres Argentinas nos dedicamos con pasion a la comercializacion de mates, bombillas
+                    y termos que representan la cultura de nuestro pais. Cada producto que ofrecemos esta fabricado con
+                    amor, calidad y tradicion.
                 </p>
             </div>
         </section>
@@ -51,16 +36,16 @@
             <div class="valor-item">
                 <i class="fas fa-globe-americas"></i>
                 <h3>Identidad Local</h3>
-                <p>Celebramos la tradición argentina con productos auténticos y originales.</p>
+                <p>Celebramos la tradicion argentina con productos autenticos y originales.</p>
             </div>
             <div class="valor-item">
                 <i class="fas fa-leaf"></i>
                 <h3>Nuestra Marca</h3>
-                <p>Elegimos crear diseños exclusivos que representen nuestra cultura.</p>
+                <p>Elegimos crear bocetos exclusivos que representen nuestra cultura.</p>
             </div>
             <div class="valor-item">
                 <i class="fas fa-users"></i>
-                <h3>Hecho con Pasión</h3>
+                <h3>Hecho con Pasion</h3>
                 <p>Somos un equipo unido que ama lo que hace y lo transmite en cada detalle.</p>
             </div>
         </section>
@@ -77,13 +62,9 @@
         </div>
     </section>
 
-    <a href="https://wa.me/393515404305" class="whatsapp-float" target="_blank" aria-label="Chatea por WhatsApp">
-        <i class="fab fa-whatsapp" style="font-size: 32px; color: white;"></i>
-    </a>
+    <%- include('partials/whatsapp') %>
 
-    <footer>
-        <p>&copy; 2025 Mi Empresa</p>
-    </footer>
+    <%- include('partials/footer') %>
 </body>
 
 <script>

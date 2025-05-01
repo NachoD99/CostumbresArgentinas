@@ -10,80 +10,53 @@
   <link rel="stylesheet" href="/css/components.css" />
   <link rel="stylesheet" href="/css/index.css" />
   <link rel="stylesheet" href="/css/faq.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-...." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-...." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
   <header>
-    <nav class="navbar">
-      <div class="navbar-logo">
-        <img src="/images/logo/favicon.png" alt="Logo">
-        <span>Costumbres Argentinas</span>
-      </div>
-      <ul class="navbar-menu">
-        <li><a href="/">HOME</a></li>
-        <li><a href="/aboutUs">SOBRE NOSOTROS</a></li>
-        <li><a href="/contact">CONTACTO</a></li>
-        <li><a href="/faq">FAQ</a></li>
-      </ul>
-      <div class="navbar-toggle" id="navbar-toggle">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </nav>
+    <%- include('partials/navbar') %>
   </header>
 
   <section class="faq-container">
     <h1 class="faq-titulo">Preguntas Frecuentes</h1>
 
-    <% const faqs = [
-  {
-    icono: "fa-truck", // 🚚 Envíos
-    pregunta: "¿Hacen envíos a todo el país?",
-    respuesta: "Sí, realizamos envíos a toda España mediante compañías como InPost y Seur."
-  },
-  {
-    icono: "fa-credit-card", // 💳 Pago
-    pregunta: "¿Cuáles son los métodos de pago?",
-    respuesta: "Aceptamos transferencias bancarias, Bizum o pagos en efectivo."
-  },
-  {
-    icono: "fa-box-open", // 📦 Seguimiento
-    pregunta: "¿Cómo hago un seguimiento de mi pedido?",
-    respuesta: "Te enviaremos un código de seguimiento apenas el pedido sea despachado."
-  }
-]; %>
+    <% const faqs=[ { icono: "fa-truck" , // 🚚 Envíos pregunta: "¿Hacen envios a todo el pais?" ,
+      respuesta: "Si, realizamos envíos a toda Espana mediante companias como InPost y Seur." }, {
+      icono: "fa-credit-card" , // 💳 Pago pregunta: "¿Cuales son los metodos de pago?" ,
+      respuesta: "Aceptamos transferencias bancarias, Bizum o pagos en efectivo." }, { icono: "fa-box-open" , // 📦
+      Seguimiento pregunta: "¿Como hago un seguimiento de mi pedido?" ,
+      respuesta: "Te enviaremos un codigo de seguimiento apenas el pedido sea despachado." } ]; %>
 
-    <% faqs.forEach((item, index) => { %>
-      <div class="faq-item">
-        <div class="faq-pregunta" onclick="toggleFAQ(<%= index %>)">
+      <% faqs.forEach((item, index)=> { %>
+        <div class="faq-item">
+          <div class="faq-pregunta" onclick="toggleFAQ(<%= index %>)">
             <div>
-              <i class="fas <%= item.icono %>" style="margin-right: 10px; color: #007bff;"></i>
+              <i class="fas <%= item.icono %>" style="margin-right: 10px; color: #74acdf;"></i>
               <%= item.pregunta %>
             </div>
             <span class="faq-icon">+</span>
           </div>
-        <div class="faq-respuesta" id="respuesta-<%= index %>">
-          <%= item.respuesta %>
+          <div class="faq-respuesta" id="respuesta-<%= index %>">
+            <%= item.respuesta %>
+          </div>
         </div>
-      </div>
-    <% }) %>
+        <% }) %>
   </section>
 
-  <a href="https://wa.me/393515404305" class="whatsapp-float" target="_blank" aria-label="Chatea por WhatsApp">
-    <i class="fab fa-whatsapp" style="font-size: 32px; color: white;"></i>
-    </a>
+  <%- include('partials/whatsapp') %>
 
-  <script>
-    function toggleFAQ(index) {
-      const items = document.querySelectorAll('.faq-item');
-      items[index].classList.toggle('active');
+    <%- include('partials/footer') %>
+      <script>
+        function toggleFAQ(index) {
+          const items = document.querySelectorAll('.faq-item');
+          items[index].classList.toggle('active');
 
-      const icon = items[index].querySelector('.faq-icon');
-      icon.textContent = items[index].classList.contains('active') ? '−' : '+';
-    }
-  </script>
+          const icon = items[index].querySelector('.faq-icon');
+          icon.textContent = items[index].classList.contains('active') ? '−' : '+';
+        }
+      </script>
 </body>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -95,4 +68,5 @@
     });
   });
 </script>
+
 </html>

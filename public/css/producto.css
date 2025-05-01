@@ -18,6 +18,7 @@
     flex-wrap: wrap;
     gap: 2rem;
     align-items: flex-start;
+    margin-top: 2rem;
   }
   
   .producto-detalle img {
@@ -186,4 +187,10 @@
   
   .color-circle input[type="radio"]:checked+span {
     border: 2px solid #000;
+  }
+
+  @media (max-width: 768px) {
+    #detalle-producto {
+      margin: 2rem 0 2rem 0;
+    } 
   }

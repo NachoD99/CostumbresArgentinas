@@ -50,7 +50,7 @@
   }
   
   .contact-form button:hover {
-    background-color: #74acdf;
+    background-color: #3a539b;
   }
   
   .redes-sociales {
@@ -61,7 +61,7 @@
   }
   
   .redes-sociales a {
-    color: #4b6cb7;
+    color: #74acdf;
     font-size: 24px;
     transition: color 0.3s ease;
   }

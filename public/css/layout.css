@@ -190,13 +190,13 @@ a {
     flex-shrink: 0;
   }
   
-  .carousel-item img {
+  .carousel-item img, .carousel-item picture {
     width: 100%;
     height: auto;
     object-fit: cover;
     display: block;
   }
-  
+
   /* Botones */
   .carousel-btn {
     position: absolute;
@@ -245,6 +245,17 @@ a {
   
   
   @media (max-width: 768px) {
+
+    .hero-carousel {
+      max-height: 240px; /* más alto para móviles */
+    }
+  
+    .carousel-item img, .carousel-item picture {
+      height: 240px;      /* forzamos altura mayor */
+      object-fit: cover;  /* mantiene recorte limpio */
+      object-position: center center;
+    }
+
     .carousel-btn {
       font-size: 1.5rem;
       padding: 0.4rem 0.8rem;

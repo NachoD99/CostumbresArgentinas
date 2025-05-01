@@ -6,7 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Catálogo</title>
+  <title>Costumbres Argentinas | Productos con tradición</title>
+  <meta name="description"
+    content="Costumbres Argentinas ofrece mates, termos y productos tradicionales con diseño y calidad. Envíos a toda España.">
+  <meta name="keywords"
+    content="mates, argentina, productos artesanales, termos, costumbres argentinas, envíos, cultura gaucha">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.costumbresargentinas.com/" />
+  <meta property="og:title" content="Costumbres Argentinas - Mates y tradición">
+  <meta property="og:description" content="Productos auténticos inspirados en nuestras raíces.">
+  <meta property="og:image" content="https://www.costumbresargentinas.com/images/social-preview.jpg">
+  <meta property="og:url" content="https://www.costumbresargentinas.com">
+  <meta property="og:type" content="website">
   <link rel="icon" href="/images/logo/favicon.png" type="image/png">
   <link rel="stylesheet" href="/css/layout.css" />
   <link rel="stylesheet" href="/css/components.css" />
@@ -21,14 +32,29 @@
   <section class="hero-carousel">
     <div class="carousel-slider">
       <div class="carousel-track">
-        <div class="carousel-item"><img src="/images/carrousel1.png" alt="1"></div>
-        <div class="carousel-item"><img src="/images/bg1.png" alt="2"></div>
-        <div class="carousel-item"><img src="/images/carrousel1.png" alt="3"></div>
+        <div class="carousel-item">
+          <picture>
+            <source media="(max-width: 768px)" srcset="/images/carrousel/1-mobile.png">
+            <img src="/images/carrousel/1.png" alt="Imagen carrusel 1">
+          </picture>
+        </div>
+        <div class="carousel-item">
+          <picture>
+            <source media="(max-width: 768px)" srcset="/images/carrousel/2-mobile.png">
+            <img src="/images/carrousel/2.png" alt="Imagen carrusel 1">
+          </picture>
+        </div>
+        <div class="carousel-item">
+          <picture>
+            <source media="(max-width: 768px)" srcset="/images/carrousel/3-mobile.png">
+            <img src="/images/carrousel/3.png" alt="Imagen carrusel 1">
+          </picture>
+        </div>
       </div>
-  
+
       <button class="carousel-btn prev">&#10094;</button>
       <button class="carousel-btn next">&#10095;</button>
-  
+
       <div class="carousel-indicators">
         <span class="dot active" data-index="0"></span>
         <span class="dot" data-index="1"></span>
@@ -36,8 +62,8 @@
       </div>
     </div>
   </section>
-  
-  
+
+
 
   <% if (novedades.length> 0) { %>
     <section class="categoria-seccion">
@@ -106,49 +132,49 @@
             });
 
             document.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector(".carousel-track");
-    const items = document.querySelectorAll(".carousel-item");
-    const prevBtn = document.querySelector(".carousel-btn.prev");
-    const nextBtn = document.querySelector(".carousel-btn.next");
-    const dots = document.querySelectorAll(".dot");
+              const track = document.querySelector(".carousel-track");
+              const items = document.querySelectorAll(".carousel-item");
+              const prevBtn = document.querySelector(".carousel-btn.prev");
+              const nextBtn = document.querySelector(".carousel-btn.next");
+              const dots = document.querySelectorAll(".dot");
 
-    let currentIndex = 0;
+              let currentIndex = 0;
 
-    function updateCarousel(index) {
-      const slideWidth = items[0].clientWidth;
-      track.style.transform = `translateX(-${slideWidth * index}px)`;
+              function updateCarousel(index) {
+                const slideWidth = items[0].clientWidth;
+                track.style.transform = `translateX(-${slideWidth * index}px)`;
 
-      dots.forEach(dot => dot.classList.remove("active"));
-      dots[index].classList.add("active");
-    }
+                dots.forEach(dot => dot.classList.remove("active"));
+                dots[index].classList.add("active");
+              }
 
-    nextBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % items.length;
-      updateCarousel(currentIndex);
-    });
+              nextBtn.addEventListener("click", () => {
+                currentIndex = (currentIndex + 1) % items.length;
+                updateCarousel(currentIndex);
+              });
 
-    prevBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + items.length) % items.length;
-      updateCarousel(currentIndex);
-    });
+              prevBtn.addEventListener("click", () => {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                updateCarousel(currentIndex);
+              });
 
-    dots.forEach(dot => {
-      dot.addEventListener("click", () => {
-        const index = parseInt(dot.dataset.index);
-        currentIndex = index;
-        updateCarousel(index);
-      });
-    });
+              dots.forEach(dot => {
+                dot.addEventListener("click", () => {
+                  const index = parseInt(dot.dataset.index);
+                  currentIndex = index;
+                  updateCarousel(index);
+                });
+              });
 
-    // Auto-slide
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % items.length;
-      updateCarousel(currentIndex);
-    }, 5000);
+              // Auto-slide
+              setInterval(() => {
+                currentIndex = (currentIndex + 1) % items.length;
+                updateCarousel(currentIndex);
+              }, 5000);
 
-    // Init
-    updateCarousel(0);
-  });
+              // Init
+              updateCarousel(0);
+            });
           </script>
 </body>
 

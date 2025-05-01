@@ -9,7 +9,7 @@ const productos = {
     {
       id: 1,
       nombre: "Mate Imperial",
-      descripcion: "Acero inoxidable libre de BPA, con doble pared aislada al vacío. Apto para lavavajillas. Capacidad: 200 ml. Recubrimiento plástico de alta calidad. Bombilla de Regalo",
+      descripcion: "Acero inoxidable libre de BPA, con doble pared aislada al vacio. Apto para lavavajillas. Recubrimiento plastico de alta calidad. Bombilla de Regalo",
       categoria: "mates",
       variantes: [
         { color: "Negro", precio: "15", hex: "#0B141D", estado: "nuevo", imagen: "/images/productos/imperial/1.png" },
@@ -21,7 +21,7 @@ const productos = {
     {
       id: 2,
       nombre: "Mate Torpedo",
-      descripcion: "Acero inoxidable libre de BPA, con doble pared aislada al vacío. Apto para lavavajillas. Capacidad: 200 ml. Recubrimiento plástico de alta calidad. Bombilla de Regalo",
+      descripcion: "Acero inoxidable libre de BPA, con doble pared aislada al vacio. Apto para lavavajillas. Recubrimiento plastico de alta calidad. Bombilla de Regalo",
       categoria: "mates",
       variantes: [
         { color: "Marrón", precio: "15", hex: "#3E313A", estado: "nuevo", imagen: "/images/productos/torpedo/1.png" },
@@ -33,7 +33,7 @@ const productos = {
     {
       id: 3,
       nombre: "Mate Acero Inoxidable Egg-Shape",
-      descripcion: "Taza de bebida de doble pared personalizada al por mayor botella con forma de huevo al vacío de acero inoxidable 304. Capacidad: 355 ml. 100% libre de BPA y libre de toxinas químicas o metálicas, y hecho de acero inoxidable 304 de alta calidad como tapa, salud, moda, protección del medio ambiente. Bombilla de regalo.",
+      descripcion: "Taza de bebida de doble pared personalizada al por mayor botella con forma de huevo al vacio de acero inoxidable. Libre de BPA y libre de toxinas quimicas o metalicas, y hecho de acero inoxidable de alta calidad como tapa, salud, moda, proteccion del medio ambiente. Bombilla de regalo.",
       categoria: "mates",
       variantes: [
         { color: "Rosa", precio: "15", hex: "#C89E91", estado: "nuevo", imagen: "/images/productos/egg-shape/1.png" },
@@ -44,7 +44,7 @@ const productos = {
     {
       id: 4,
       nombre: "Mate Acero Inoxidable",
-      descripcion: "100% libre de BPA y libre de toxinas químicas o metálicas, y hecho de acero inoxidable 304 de alta calidad como tapa, salud, moda, protección del medio ambiente. Capacidad: 240 ml. Bombilla de regalo.",
+      descripcion: "100% libre de BPA y libre de toxinas quimicas o metalicas, y hecho de acero inoxidable 304 de alta calidad como tapa, salud, moda, proteccion del medio ambiente. Bombilla de regalo.",
       categoria: "mates",
       variantes: [
         { color: "Negro", precio: "15", hex: "#13171A", estado: "nuevo", imagen: "/images/productos/acero-mate/1.png" },

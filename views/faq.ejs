@@ -22,12 +22,23 @@
   <section class="faq-container">
     <h1 class="faq-titulo">Preguntas Frecuentes</h1>
 
-    <% const faqs=[ { icono: "fa-truck" , // 🚚 Envíos pregunta: "¿Hacen envios a todo el pais?" ,
-      respuesta: "Si, realizamos envíos a toda Espana mediante companias como InPost y Seur." }, {
-      icono: "fa-credit-card" , // 💳 Pago pregunta: "¿Cuales son los metodos de pago?" ,
-      respuesta: "Aceptamos transferencias bancarias, Bizum o pagos en efectivo." }, { icono: "fa-box-open" , // 📦
-      Seguimiento pregunta: "¿Como hago un seguimiento de mi pedido?" ,
-      respuesta: "Te enviaremos un codigo de seguimiento apenas el pedido sea despachado." } ]; %>
+    <% const faqs = [
+  {
+    icono: "fa-truck",
+    pregunta: "¿Hacen envios a todo el pais?",
+    respuesta: "Si, realizamos envios a toda Espana mediante companias como InPost y Seur."
+  },
+  {
+    icono: "fa-credit-card",
+    pregunta: "¿Cuales son los metodos de pago?",
+    respuesta: "Aceptamos transferencias bancarias, Bizum o pagos en efectivo."
+  },
+  {
+    icono: "fa-box-open",
+    pregunta: "¿Como hago un seguimiento de mi pedido?",
+    respuesta: "Te enviaremos un codigo de seguimiento apenas el pedido sea despachado."
+  }
+]; %>
 
       <% faqs.forEach((item, index)=> { %>
         <div class="faq-item">

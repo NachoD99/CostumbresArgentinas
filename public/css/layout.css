@@ -1,6 +1,13 @@
+@font-face {
+  font-family: 'Argentina';
+  src: url('/fonts/argentina.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
-  font-family: 'Special Gothic Expanded One', sans-serif;
+  font-family: 'Argentina', sans-serif;
   margin: 0;
   padding: 0;
   background: #fefefe;
@@ -126,6 +133,10 @@ body {
     .navbar-toggle {
       display: flex;
       margin-right: 20px;
+    }
+
+    .navbar-logo {
+      font-size: 1rem;
     }
   
     h1 {

@@ -60,6 +60,7 @@
   .volver-btn {
     background-color: #74acdf;
     /* azul elegante */
+    font-family: inherit;
     color: white;
     border: none;
     padding: 0.6rem 1.2rem;

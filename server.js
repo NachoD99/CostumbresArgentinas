@@ -3,6 +3,11 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const PORT = 3000;
+const nodemailer = require('nodemailer');
+// 🔴 IMPORTANTE: esto va antes de cualquier `req.body`
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json()); // por si recibís JSON también
+
 
 // Lista de productos
 const productos = {
@@ -209,7 +214,6 @@ app.listen(PORT, () => {
 
 
 // Middleware para procesar formularios
-const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -218,9 +222,8 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-app.use(express.urlencoded({ extended: true }));
-
 app.post('/enviar', (req, res) => {
+  console.log('BODY RECIBIDO:', req.body);
   const { nombre, email, mensaje } = req.body;
 
   if (!nombre || !email || !mensaje) {

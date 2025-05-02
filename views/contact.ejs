@@ -31,6 +31,8 @@
             <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
             <button type="submit">Enviar mensaje</button>
 
+            <div id="contactMessage" class="contact-message"></div>
+
             <div class="redes-sociales">
                 <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
@@ -61,29 +63,41 @@
     });
 
     document.getElementById('contactForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
+    e.preventDefault(); // 🔴 evita la recarga que causa el GET
 
-    const form = e.target;
-    const data = new FormData(form);
-    const messageBox = document.getElementById('contactMessage');
+     const form = e.target;
+  const data = {
+    nombre: form.nombre.value,
+    email: form.email.value,
+    mensaje: form.mensaje.value
+  };
 
-    try {
-      const res = await fetch('/enviar', {
-        method: 'POST',
-        body: data,
-      });
+  const messageBox = document.getElementById('contactMessage');
 
-      const text = await res.text();
-      if (res.ok) {
-        messageBox.innerHTML = `<span class="success">✅ Mensaje enviado correctamente</span>`;
-        form.reset(); // limpia los campos
-      } else {
-        messageBox.innerHTML = `<span class="error">❌ Error al enviar: ${text}</span>`;
-      }
-    } catch (error) {
-      messageBox.innerHTML = `<span class="error">❌ Error inesperado</span>`;
-      console.error(error);
+  try {
+    const res = await fetch('/enviar', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    const text = await res.text();
+    if (res.ok) {
+      messageBox.innerHTML = `<span class="success">✅ Mensaje enviado correctamente</span>`;
+      form.reset();
+    } else {
+      messageBox.innerHTML = `<span class="error">❌ Error al enviar: ${text}</span>`;
     }
+  } catch (error) {
+    messageBox.innerHTML = `<span class="error">❌ Error inesperado</span>`;
+    console.error(error);
+  }
+
+  setTimeout(() => {
+      messageBox.innerHTML = '';
+    }, 5000);
   });
 </script>
 

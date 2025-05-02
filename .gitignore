@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+
+# Build output (si usás algún proceso de build)
+dist/
+build/
+
+# Optional: carpeta de caché si usás tools como nodemon o pm2
+.pnpm-store/
+.nyc_output/

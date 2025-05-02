@@ -92,3 +92,16 @@
       padding: 12px;
     }
   }
+
+  .contact-message {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .contact-message .success {
+    color: green;
+  }
+  
+  .contact-message .error {
+    color: red;
+  }

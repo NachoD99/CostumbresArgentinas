@@ -25,9 +25,9 @@
 
     <section class="contact-section">
         <h2>Contacto</h2>
-        <form class="contact-form" action="/enviar" method="POST">
+        <form id="contactForm" class="contact-form" action="/enviar" method="POST">
             <input type="text" name="nombre" placeholder="Tu nombre" required />
-            <input type="email" name="email" placeholder="Tu correo electrónico" required />
+            <input type="email" name="email" placeholder="Tu correo electronico" required />
             <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
             <button type="submit">Enviar mensaje</button>
 
@@ -59,6 +59,32 @@
             navbarMenu.classList.toggle("active");
         });
     });
+
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+    const messageBox = document.getElementById('contactMessage');
+
+    try {
+      const res = await fetch('/enviar', {
+        method: 'POST',
+        body: data,
+      });
+
+      const text = await res.text();
+      if (res.ok) {
+        messageBox.innerHTML = `<span class="success">✅ Mensaje enviado correctamente</span>`;
+        form.reset(); // limpia los campos
+      } else {
+        messageBox.innerHTML = `<span class="error">❌ Error al enviar: ${text}</span>`;
+      }
+    } catch (error) {
+      messageBox.innerHTML = `<span class="error">❌ Error inesperado</span>`;
+      console.error(error);
+    }
+  });
 </script>
 
 </html>

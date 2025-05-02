@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -154,7 +155,6 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 const productosDestacados = [];
 
 Object.values(productos).forEach(lista => {
@@ -209,18 +209,42 @@ app.listen(PORT, () => {
 
 
 // Middleware para procesar formularios
+const nodemailer = require('nodemailer');
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  }
+});
+
 app.use(express.urlencoded({ extended: true }));
 
-// Ruta POST para contacto
 app.post('/enviar', (req, res) => {
   const { nombre, email, mensaje } = req.body;
 
-  // Podés hacer algo útil aquí: enviar mail, guardar en base de datos, etc.
-  console.log('Formulario recibido:', { nombre, email, mensaje });
+  if (!nombre || !email || !mensaje) {
+    return res.status(400).send('Por favor completá todos los campos.');
+  }
 
-  // Redirige o responde
-  res.redirect('/contact');
-  res.send('Gracias por contactarte. Te responderemos pronto.');
+  const mailOptions = {
+    from: `"${nombre}" <${email}>`,
+    to: 'tudestino@gmail.com', // correo que recibe
+    subject: 'Nuevo mensaje desde Costumbres Argentinas',
+    text: `Nombre: ${nombre}\nCorreo: ${email}\nMensaje:\n${mensaje}`,
+    html: `
+      <h2>Nuevo mensaje de contacto</h2>
+      <p><strong>Nombre:</strong> ${nombre}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Mensaje:</strong><br>${mensaje}</p>
+    `
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error('Error al enviar el correo:', error);
+      return res.status(500).send('Hubo un error al enviar tu mensaje.');
+    }
+    else return res.status(200).send('Mensaje enviado correctamente.');
+  });
 });
-
-

@@ -1,5 +1,6 @@
 .hero-carousel {
     width: 100%;
+    max-width: 100vw;
     padding: 0;
     margin-top: 4rem;
     position: relative;
@@ -26,7 +27,7 @@
   .carousel-item img, .carousel-item picture {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
   }
 
@@ -85,7 +86,7 @@
   
     .carousel-item img, .carousel-item picture {
       height: 240px;      /* forzamos altura mayor */
-      object-fit: cover;  /* mantiene recorte limpio */
+      object-fit: contain;  /* mantiene recorte limpio */
       object-position: center center;
     }
 

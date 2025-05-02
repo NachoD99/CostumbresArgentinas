@@ -232,7 +232,7 @@ app.post('/enviar', (req, res) => {
 
   const mailOptions = {
     from: `"${nombre}" <${email}>`,
-    to: 'tudestino@gmail.com', // correo que recibe
+    to: 'nachodavanzo@gmail.com', // correo que recibe
     subject: 'Nuevo mensaje desde Costumbres Argentinas',
     text: `Nombre: ${nombre}\nCorreo: ${email}\nMensaje:\n${mensaje}`,
     html: `

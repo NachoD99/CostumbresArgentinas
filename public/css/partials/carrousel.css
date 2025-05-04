@@ -81,12 +81,23 @@
   @media (max-width: 768px) {
 
     .hero-carousel {
-      max-height: 240px; /* más alto para móviles */
+      max-height: 240px;
+      position: relative;
     }
   
-    .carousel-item img, .carousel-item picture {
-      height: 240px;      /* forzamos altura mayor */
-      object-fit: contain;  /* mantiene recorte limpio */
+    .carousel-item {
+      width: 100%;
+      height: 240px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .carousel-item img,
+    .carousel-item picture {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* O usa 'contain' si querés evitar recortes */
     }
 
     .carousel-btn {

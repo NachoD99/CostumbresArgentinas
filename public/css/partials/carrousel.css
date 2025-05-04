@@ -86,7 +86,7 @@
   
     .carousel-item img, .carousel-item picture {
       height: 240px;      /* forzamos altura mayor */
-      object-fit: fill;  /* mantiene recorte limpio */
+      object-fit: contain;  /* mantiene recorte limpio */
     }
 
     .carousel-btn {

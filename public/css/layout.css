@@ -31,3 +31,7 @@ a {
   section {
     padding: 2rem;
   }
+
+  button {
+    font-family: inherit;
+  }

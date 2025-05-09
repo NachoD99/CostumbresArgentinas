@@ -71,19 +71,27 @@
             <div class="productos">
               <% productos[categoria].forEach(producto=> { %>
                 <div class="producto">
-                  <a href="/producto/<%= producto.id %>?categoria=<%= categoria %>">
-                    <img src="<%= producto.variantes[0].imagen %>" alt="<%= producto.nombre %>" />
-                  
-                  <div class="producto-info-mobile">
-                    <h4>
-                      <%= producto.nombre %>
-                    </h4>
-                    <p class="solo-mobile">
-                      <%= producto.descripcion %>
-                    </p>
+                  <div class="mini-carousel" data-index="<%= producto.id %>">
+                    <% producto.variantes.forEach((variante, i) => { %>
+                      <img
+                        src="<%= variante.imagen %>"
+                        alt="<%= producto.nombre %> - <%= variante.color %>"
+                        class="carousel-slide <%= i === 0 ? 'active' : '' %>"
+                      />
+                    <% }) %>
+                    <button class="carousel-arrow left" aria-label="Anterior">&#10094;</button>
+                    <button class="carousel-arrow right" aria-label="Siguiente">&#10095;</button>
                   </div>
-                </a>
+                
+                  <a href="/producto/<%= producto.id %>?categoria=<%= categoria %>">
+                    <div class="producto-info">
+                      <h4><%= producto.nombre %></h4>
+                      <p class="solo-mobile"><%= producto.descripcion %></p>
+                    </div>
+                  </a>
                 </div>
+                
+                
                 <% }) %>
             </div>
           </section>
@@ -148,6 +156,36 @@
               // Init
               updateCarousel(0);
             });
+
+            document.addEventListener("DOMContentLoaded", function () {
+    const carousels = document.querySelectorAll('.mini-carousel');
+
+    carousels.forEach(carousel => {
+      const slides = carousel.querySelectorAll('.carousel-slide');
+      const leftBtn = carousel.querySelector('.carousel-arrow.left');
+      const rightBtn = carousel.querySelector('.carousel-arrow.right');
+
+      let index = 0;
+
+      const showSlide = (i) => {
+        slides[index].classList.remove('active');
+        index = (i + slides.length) % slides.length;
+        slides[index].classList.add('active');
+      };
+
+      leftBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showSlide(index - 1);
+      });
+
+      rightBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showSlide(index + 1);
+      });
+
+      setInterval(() => showSlide(index + 1), 4000);
+    });
+  });
           </script>
 </body>
 

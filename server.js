@@ -21,7 +21,7 @@ const productos = {
         { color: "Marrón", precio: "15", hex: "#3E313A", estado: "nuevo", imagen: "/images/productos/imperial/1.png" },
         { color: "Gris", precio: "15", hex: "#4E4C51", estado: "nuevo", imagen: "/images/productos/imperial/3.png" },
         { color: "Rosa", precio: "15", hex: "#93786F", estado: "nuevo", imagen: "/images/productos/imperial/2.png" },
-        { color: "Negro", precio: "15", hex: "#0B141D", estado: "nuevo", imagen: "/images/productos/imperial/4.png" },
+        { color: "Negro", precio: "15", hex: "#0B141D", estado: "agotado", imagen: "/images/productos/imperial/4.png" },
       ]
     },
     {
